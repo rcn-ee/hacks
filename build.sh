@@ -1,18 +1,18 @@
 #!/bin/bash
 
-git clone git://git.ti.com/k3-image-gen/k3-image-gen.git
+git clone https://github.com/beagleboard/k3-image-gen
 cd ./k3-image-gen/
 make SOC=j721e CROSS_COMPILE=arm-linux-gnueabihf-
 mv sysfw.itb ../
 cd ../
 
-git clone https://github.com/ARM-software/arm-trusted-firmware.git
+git clone https://github.com/beagleboard/arm-trusted-firmware
 cd ./arm-trusted-firmware/
 make CROSS_COMPILE=aarch64-linux-gnu- ARCH=aarch64 PLAT=k3 TARGET_BOARD=generic SPD=opteed
 mv build/k3/generic/release/bl31.bin ../
 cd ../
 
-git clone https://github.com/OP-TEE/optee_os.git
+git clone https://github.com/beagleboard/optee_os
 cd ./optee_os/
 make PLATFORM=k3-j721e CFG_ARM64_core=y
 mv out/arm-plat-k3/core/tee-pager_v2.bin ../
