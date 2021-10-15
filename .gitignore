@@ -1,6 +1,6 @@
-sysfw.itb
-bl31.bin
-tee-pager_v2.bin
-tiboot3.bin
-tispl.bin
-u-boot.img
+k3-image-gen/
+u-boot/
+deploy/sysfw.itb
+deploy/tiboot3.bin
+deploy/tispl.bin
+deploy/u-boot.img
