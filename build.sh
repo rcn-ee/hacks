@@ -13,11 +13,13 @@ make SOC=j721e CONFIG=evm CROSS_COMPILE=arm-linux-gnueabihf-
 cp -v sysfw.itb ../deploy/
 cd ../
 
-#git clone -b 08.00.00.004 https://github.com/beagleboard/arm-trusted-firmware --depth=10
-#cd ./arm-trusted-firmware/
-#make -j4 CROSS_COMPILE=aarch64-linux-gnu- ARCH=aarch64 PLAT=k3 TARGET_BOARD=generic SPD=opteed
-#mv build/k3/generic/release/bl31.bin ../
-#cd ../
+git clone -b 08.00.00.004 https://github.com/beagleboard/arm-trusted-firmware --depth=10
+cd ./arm-trusted-firmware/
+make -j4 CROSS_COMPILE=aarch64-linux-gnu- ARCH=aarch64 PLAT=k3 TARGET_BOARD=generic SPD=opteed all
+ls -alh
+exit 2
+cp -v build/k3/generic/release/bl31.bin ../deploy/
+cd ../
 
 #git clone -b 3.12.0 https://github.com/beagleboard/optee_os --depth=10
 #cd ./optee_os/
