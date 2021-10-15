@@ -36,7 +36,7 @@ fi
 git clone -b 3.12.0 https://github.com/beagleboard/optee_os --depth=10
 cd ./optee_os/
 make -j4 PLATFORM=k3-j721e CFG_ARM64_core=y
-cp -v out/arm-plat-k3/core/tee-pager_v2.bin ../
+cp -v out/arm-plat-k3/core/tee-pager_v2.bin ../deploy/
 cd ../
 
 if [ -d ./u-boot ] ; then
