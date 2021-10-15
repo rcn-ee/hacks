@@ -44,7 +44,7 @@ make -j4 CROSS_COMPILE=arm-linux-gnueabihf- O=/tmp/r5
 cp -v /tmp/r5/tiboot3.bin ../deploy/
 make CROSS_COMPILE=aarch64-linux-gnu- j721e_evm_a72_defconfig O=/tmp/a72
 #make -j4 CROSS_COMPILE=aarch64-linux-gnu- ATF=/opt/u-boot/bb-u-boot-j721e-evm/bl31.bin TEE=/opt/u-boot/bb-u-boot-j721e-evm/tee-pager_v2.bin DM=/opt/u-boot/bb-u-boot-j721e-evm/ipc_echo_testb_mcu1_0_release_strip.xer5f O=/tmp/a72
-make -j4 CROSS_COMPILE=aarch64-linux-gnu- ATF=/home/debian/hacks/deploy/bl31.bin TEE=/opt/u-boot/bb-u-boot-j721e-evm/tee-pager_v2.bin DM=/opt/u-boot/bb-u-boot-j721e-evm/ipc_echo_testb_mcu1_0_release_strip.xer5f O=/tmp/a72
+make -j4 CROSS_COMPILE=aarch64-linux-gnu- ATF=../deploy/bl31.bin TEE=/opt/u-boot/bb-u-boot-j721e-evm/tee-pager_v2.bin DM=/opt/u-boot/bb-u-boot-j721e-evm/ipc_echo_testb_mcu1_0_release_strip.xer5f O=/tmp/a72
 #make -j4 CROSS_COMPILE=aarch64-linux-gnu- ATF=../bl31.bin TEE=../tee-pager_v2.bin DM=/opt/u-boot/bb-u-boot-j721e-evm/ipc_echo_testb_mcu1_0_release_strip.xer5f O=/tmp/a72
 cp -v /tmp/a72/tispl.bin ../deploy/
 cp -v /tmp/a72/u-boot.img ../deploy/
